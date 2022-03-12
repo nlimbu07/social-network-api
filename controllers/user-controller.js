@@ -68,6 +68,7 @@ const userController = {
       .catch((err) => res.json(err));
   },
 
+  // add a friend
   addFriend({ params }, res) {
     User.findByIdAndUpdate(
       { _id: params.id },
@@ -87,6 +88,7 @@ const userController = {
       .catch((err) => res.json(err));
   },
 
+  // remove a friend
   removeFriend({ params }, res) {
     User.findByIdAndUpdate(
       { _id: params.id },
